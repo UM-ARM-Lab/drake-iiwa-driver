@@ -1,0 +1,6 @@
+#!/bin/bash
+
+/home/armlab/Documents/drake-iiwa-driver/build/bin/kuka_driver -fri_port 30200 -lcm_url udpm://239.255.76.77:6666?ttl=0 --lcm_command_channel=IIWA_COMMAND --lcm_status_channel=IIWA_STATUS -mlockall -realtime > ~/.right_arm_log 2>&1 &
+
+/home/armlab/Documents/drake-iiwa-driver/build/bin/kuka_driver -fri_port 30201 -lcm_url udpm://239.255.76.76:6666?ttl=0 --lcm_command_channel=IIWA_COMMAND --lcm_status_channel=IIWA_STATUS -mlockall -realtime > ~/.left_arm_log 2>&1 &
+
